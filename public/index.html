@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  <title>IOTG</title>  
+</head>
+<body>
+  <div class="container">
+
+    <div class="container-header">
+      <span class="material-symbols-outlined">
+        elderly
+        </span>
+      <h6>ESP32C3 Dashboard Sensor Readings</h6>
+    </div>
+
+    <div class="container-content">
+      <div class ="container-left">
+        <div class="health-card">
+          <div class="health-card-header">
+            <span class="material-symbols-outlined">
+              thermometer
+              </span>
+            <h1>Temperature</h1>
+          </div>
+          <div class="health-card-content">
+            <h2 id="TempLb">36 degree</h2>
+          </div>
+        </div>
+
+        <div class="health-card">
+          <div class="health-card-header">
+            <span class="material-symbols-outlined">
+              humidity_low
+              </span>
+            <h1>Humidity</h1>
+          </div>
+          <div class="health-card-content">
+            <h2 id="HumiLb">36 %</h2>
+          </div>
+        </div>
+
+        <div class="health-card">
+          <div class="health-card-header">
+           <span class="material-symbols-outlined">
+              favorite
+              </span>
+            <h1>BPM</h1>
+         </div>
+         <div class="health-card-content">
+           <h2 id="BPMLb">70 BPM</h2>
+          </div>
+       </div>
+
+        <div class="health-card">
+         <div class="health-card-header">
+          <span class="material-symbols-outlined">
+            falling
+            </span>
+            <h1>Fall</h1>
+         </div>
+         <div class="health-card-content">
+          <div class="Fall">
+            <h2 id="FallLb">Fall: </h2>
+            <h2>0 = Normal, 1 = Fall Detected</h2>  
+          </div>
+         </div>
+        </div>
+
+      </div>
+      
+      <div class="container-right">
+        <canvas id="healthChart" height="300" width="400"></canvas>
+      </div>
+    </div>
+
+
+
+    </div>
+  </div>
+</body>
+
+<script type="module" src="script.js"></script>
+</html>
